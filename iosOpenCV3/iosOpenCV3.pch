@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  iosOpenCV3
+//
+//  Created by mac on 2019/7/25.
+//  Copyright © 2019 David Ji. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Availability.h>
+
+#ifdef __cplusplus
+#import <opencv2/opencv.hpp>
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#endif /* PrefixHeader_pch */
