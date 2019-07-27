@@ -8,6 +8,8 @@
 
 #import "ImageVC.h"
 
+using namespace cv;
+
 @interface ImageVC ()
 
 @end
@@ -19,13 +21,10 @@
     
     UIImage *image = [UIImage imageNamed:@"Demo.jpg"];
     
-    cv::Mat m=[self cvMatFromUIImage:image];
-    cv::Mat greyMat;
-    cv::cvtColor(m, greyMat, 6);
-    //    cv::cvtColor(inputMat, greyMat, COLOR_BGR2GRAY);
-    
+    Mat m=[self cvMatFromUIImage:image];
+    Mat greyMat;
+    cvtColor(m, greyMat, 6);
     UIImage *result=[self UIImageFromCVMat:greyMat];
-    
     [self.view addSubview:[[UIImageView alloc]initWithImage:result]];
 }
 

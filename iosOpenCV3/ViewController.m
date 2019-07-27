@@ -8,11 +8,13 @@
 #import "ViewController.h"
 #import "ImageVC.h"
 #import "VideoVC.h"
+#import "ImageProcessVC.h"
 
 @interface ViewController ()
 
 @property(nonatomic,strong) UIButton * imageBtn;
 @property(nonatomic,strong) UIButton * videoBtn;
+@property(nonatomic,strong) UIButton * imageProcessBtn;
 
 @end
 
@@ -40,6 +42,16 @@
     [_videoBtn.layer setCornerRadius:10.0];
     [_videoBtn addTarget:self action:@selector(videoDemo:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.videoBtn];
+    
+    _imageProcessBtn=[UIButton new];
+    _imageProcessBtn.backgroundColor=[UIColor brownColor];
+    _imageProcessBtn.frame=CGRectMake(30, 150, 145, 45);
+    _imageProcessBtn.titleLabel.font=[UIFont systemFontOfSize:20];
+    _imageProcessBtn.titleLabel.textColor=[UIColor whiteColor];
+    [_imageProcessBtn setTitle:@"处理图片" forState:UIControlStateNormal];
+    [_imageProcessBtn.layer setCornerRadius:10.0];
+    [_imageProcessBtn addTarget:self action:@selector(imageProcess:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.imageProcessBtn];
 }
 
 -(void)imageDemo:(UIButton*)sender{
@@ -52,6 +64,10 @@
     [self.navigationController pushViewController:tableViewController animated:YES];
 }
 
+-(void)imageProcess:(UIButton*)sender{
+    ImageProcessVC * tableViewController=[[ImageProcessVC alloc]init];
+    [self.navigationController pushViewController:tableViewController animated:YES];
+}
 
 
 @end

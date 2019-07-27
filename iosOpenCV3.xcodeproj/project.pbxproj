@@ -27,6 +27,7 @@
 		04CDF47222E9555800759631 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CDF47122E9555800759631 /* CoreVideo.framework */; };
 		04CDF47422E9556300759631 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CDF47322E9556300759631 /* QuartzCore.framework */; };
 		04CDF47722E955CA00759631 /* Demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04CDF47622E955CA00759631 /* Demo.jpg */; };
+		04CDF47A22EADFDA00759631 /* ImageProcessVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04CDF47922EADFDA00759631 /* ImageProcessVC.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		04CDF47122E9555800759631 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		04CDF47322E9556300759631 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		04CDF47622E955CA00759631 /* Demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Demo.jpg; sourceTree = "<group>"; };
+		04CDF47822EADFDA00759631 /* ImageProcessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageProcessVC.h; sourceTree = "<group>"; };
+		04CDF47922EADFDA00759631 /* ImageProcessVC.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessVC.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				04CDF44C22E950CF00759631 /* LaunchScreen.storyboard */,
 				04CDF44F22E950CF00759631 /* Info.plist */,
 				04CDF45022E950CF00759631 /* main.m */,
+				04CDF47822EADFDA00759631 /* ImageProcessVC.h */,
+				04CDF47922EADFDA00759631 /* ImageProcessVC.mm */,
 			);
 			path = iosOpenCV3;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				04CDF44622E950CC00759631 /* ViewController.m in Sources */,
 				04CDF45122E950CF00759631 /* main.m in Sources */,
 				04CDF46522E954B400759631 /* VideoVC.mm in Sources */,
+				04CDF47A22EADFDA00759631 /* ImageProcessVC.mm in Sources */,
 				04CDF44322E950CC00759631 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
