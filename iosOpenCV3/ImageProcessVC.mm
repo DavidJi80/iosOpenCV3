@@ -142,7 +142,7 @@ using namespace cv;     //openCV的cv命名空间
 }
 
 /**
- 腐蚀
+ 边缘检测
  */
 -(void)cannyImg{
     Mat srcMat=[self cvMatFromUIImage:_image];              //源图片的Mat
