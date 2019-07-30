@@ -9,12 +9,14 @@
 #import "ImageVC.h"
 #import "VideoVC.h"
 #import "ImageProcessVC.h"
+#import "MatVC.h"
 
 @interface ViewController ()
 
 @property(nonatomic,strong) UIButton * imageBtn;
 @property(nonatomic,strong) UIButton * videoBtn;
 @property(nonatomic,strong) UIButton * imageProcessBtn;
+@property(nonatomic,strong) UIButton * matBtn;
 
 @end
 
@@ -52,6 +54,16 @@
     [_imageProcessBtn.layer setCornerRadius:10.0];
     [_imageProcessBtn addTarget:self action:@selector(imageProcess:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.imageProcessBtn];
+    
+    _matBtn=[UIButton new];
+    _matBtn.backgroundColor=[UIColor brownColor];
+    _matBtn.frame=CGRectMake(200, 150, 145, 45);
+    _matBtn.titleLabel.font=[UIFont systemFontOfSize:20];
+    _matBtn.titleLabel.textColor=[UIColor whiteColor];
+    [_matBtn setTitle:@"Mat" forState:UIControlStateNormal];
+    [_matBtn.layer setCornerRadius:10.0];
+    [_matBtn addTarget:self action:@selector(mat:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_matBtn];
 }
 
 -(void)imageDemo:(UIButton*)sender{
@@ -68,6 +80,12 @@
     ImageProcessVC * tableViewController=[[ImageProcessVC alloc]init];
     [self.navigationController pushViewController:tableViewController animated:YES];
 }
+
+-(void)mat:(UIButton*)sender{
+    MatVC * tableViewController=[[MatVC alloc]init];
+    [self.navigationController pushViewController:tableViewController animated:NO];
+}
+
 
 
 @end

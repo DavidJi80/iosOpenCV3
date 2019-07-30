@@ -8,6 +8,7 @@
 
 #import "VideoVC.h"
 #import <opencv2/videoio/cap_ios.h>
+#import "OpenCVUtility.h"
 
 using namespace cv;
 
@@ -80,11 +81,8 @@ typedef enum _CvEffect {
 
 #ifdef __cplusplus
 - (void)processImage:(Mat&)image{
-    //cv::Mat gray;
-    //cv::cvtColor(image, gray, CV_BGR2GRAY);                     // 转换成灰色
     switch (self.cvEffect) {
         case SOURCE:
-            //...
             break;
         case ERODE:
             [self erodeImg:image];
@@ -131,7 +129,8 @@ typedef enum _CvEffect {
  阈值
  */
 -(void)thresholdImg:(Mat&)image{
-    threshold(image, image, 100, 255, cv::THRESH_BINARY);    // 利用阈值算得新的cvMat形式的图像
+    //cvtColor(image, image, CV_BGR2GRAY);                     // 转换成灰色
+    threshold(image, image, 100, 255, THRESH_BINARY);    // 利用阈值算得新的cvMat形式的图像
 }
 #endif
 

@@ -128,6 +128,7 @@ using namespace cv;     //openCV的cv命名空间
     erode(srcMat, dstMat, element);                                 //对图像进行腐蚀操作
     UIImage * dstImage=[self UIImageFromCVMat:dstMat];
     self.dstImgView.image=dstImage;
+    
 }
 
 /**

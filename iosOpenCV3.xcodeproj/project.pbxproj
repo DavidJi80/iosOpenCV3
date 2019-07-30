@@ -28,6 +28,8 @@
 		04CDF47422E9556300759631 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CDF47322E9556300759631 /* QuartzCore.framework */; };
 		04CDF47722E955CA00759631 /* Demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04CDF47622E955CA00759631 /* Demo.jpg */; };
 		04CDF47A22EADFDA00759631 /* ImageProcessVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04CDF47922EADFDA00759631 /* ImageProcessVC.mm */; };
+		04CDF47D22EC578D00759631 /* OpenCVUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CDF47C22EC578D00759631 /* OpenCVUtility.m */; };
+		04CDF48422EED68800759631 /* MatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CDF48322EED68800759631 /* MatVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,10 @@
 		04CDF47622E955CA00759631 /* Demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Demo.jpg; sourceTree = "<group>"; };
 		04CDF47822EADFDA00759631 /* ImageProcessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageProcessVC.h; sourceTree = "<group>"; };
 		04CDF47922EADFDA00759631 /* ImageProcessVC.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessVC.mm; sourceTree = "<group>"; };
+		04CDF47B22EC578D00759631 /* OpenCVUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVUtility.h; sourceTree = "<group>"; };
+		04CDF47C22EC578D00759631 /* OpenCVUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCVUtility.m; sourceTree = "<group>"; };
+		04CDF48222EED68800759631 /* MatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatVC.h; sourceTree = "<group>"; };
+		04CDF48322EED68800759631 /* MatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,22 +111,16 @@
 			isa = PBXGroup;
 			children = (
 				04CDF47522E955CA00759631 /* img */,
-				04CDF46322E954B400759631 /* ImageVC.h */,
-				04CDF46422E954B400759631 /* ImageVC.mm */,
-				04CDF46222E954B400759631 /* VideoVC.h */,
-				04CDF46122E954B400759631 /* VideoVC.mm */,
+				04CDF47E22EC579A00759631 /* utility */,
+				04CDF47F22EC57B600759631 /* controller */,
 				04CDF45922E9528300759631 /* iosOpenCV3.pch */,
 				04CDF44122E950CC00759631 /* AppDelegate.h */,
 				04CDF44222E950CC00759631 /* AppDelegate.m */,
-				04CDF44422E950CC00759631 /* ViewController.h */,
-				04CDF44522E950CC00759631 /* ViewController.m */,
 				04CDF44722E950CC00759631 /* Main.storyboard */,
 				04CDF44A22E950CF00759631 /* Assets.xcassets */,
 				04CDF44C22E950CF00759631 /* LaunchScreen.storyboard */,
 				04CDF44F22E950CF00759631 /* Info.plist */,
 				04CDF45022E950CF00759631 /* main.m */,
-				04CDF47822EADFDA00759631 /* ImageProcessVC.h */,
-				04CDF47922EADFDA00759631 /* ImageProcessVC.mm */,
 			);
 			path = iosOpenCV3;
 			sourceTree = "<group>";
@@ -149,6 +149,32 @@
 				04CDF47622E955CA00759631 /* Demo.jpg */,
 			);
 			path = img;
+			sourceTree = "<group>";
+		};
+		04CDF47E22EC579A00759631 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				04CDF47B22EC578D00759631 /* OpenCVUtility.h */,
+				04CDF47C22EC578D00759631 /* OpenCVUtility.m */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
+		04CDF47F22EC57B600759631 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CDF46322E954B400759631 /* ImageVC.h */,
+				04CDF46422E954B400759631 /* ImageVC.mm */,
+				04CDF46222E954B400759631 /* VideoVC.h */,
+				04CDF46122E954B400759631 /* VideoVC.mm */,
+				04CDF47822EADFDA00759631 /* ImageProcessVC.h */,
+				04CDF47922EADFDA00759631 /* ImageProcessVC.mm */,
+				04CDF44422E950CC00759631 /* ViewController.h */,
+				04CDF44522E950CC00759631 /* ViewController.m */,
+				04CDF48222EED68800759631 /* MatVC.h */,
+				04CDF48322EED68800759631 /* MatVC.m */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +253,9 @@
 				04CDF45122E950CF00759631 /* main.m in Sources */,
 				04CDF46522E954B400759631 /* VideoVC.mm in Sources */,
 				04CDF47A22EADFDA00759631 /* ImageProcessVC.mm in Sources */,
+				04CDF48422EED68800759631 /* MatVC.m in Sources */,
 				04CDF44322E950CC00759631 /* AppDelegate.m in Sources */,
+				04CDF47D22EC578D00759631 /* OpenCVUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
