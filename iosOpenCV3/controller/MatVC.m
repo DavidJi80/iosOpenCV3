@@ -187,5 +187,9 @@ using namespace cv;
     self.srcImgView.image=[OpenCVUtility UIImageFromCVMat:mat];
 }
 
+-(void)aa{
+    
+}
+
 
 @end

@@ -30,6 +30,7 @@
 		04CDF47A22EADFDA00759631 /* ImageProcessVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04CDF47922EADFDA00759631 /* ImageProcessVC.mm */; };
 		04CDF47D22EC578D00759631 /* OpenCVUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CDF47C22EC578D00759631 /* OpenCVUtility.m */; };
 		04CDF48422EED68800759631 /* MatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CDF48322EED68800759631 /* MatVC.m */; };
+		04CDF48722F027CD00759631 /* EdgeVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04CDF48622F027CD00759631 /* EdgeVC.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,8 @@
 		04CDF47C22EC578D00759631 /* OpenCVUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCVUtility.m; sourceTree = "<group>"; };
 		04CDF48222EED68800759631 /* MatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatVC.h; sourceTree = "<group>"; };
 		04CDF48322EED68800759631 /* MatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatVC.m; sourceTree = "<group>"; };
+		04CDF48522F027CD00759631 /* EdgeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EdgeVC.h; sourceTree = "<group>"; };
+		04CDF48622F027CD00759631 /* EdgeVC.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EdgeVC.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 				04CDF44522E950CC00759631 /* ViewController.m */,
 				04CDF48222EED68800759631 /* MatVC.h */,
 				04CDF48322EED68800759631 /* MatVC.m */,
+				04CDF48522F027CD00759631 /* EdgeVC.h */,
+				04CDF48622F027CD00759631 /* EdgeVC.mm */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				04CDF46622E954B400759631 /* ImageVC.mm in Sources */,
 				04CDF44622E950CC00759631 /* ViewController.m in Sources */,
 				04CDF45122E950CF00759631 /* main.m in Sources */,
+				04CDF48722F027CD00759631 /* EdgeVC.mm in Sources */,
 				04CDF46522E954B400759631 /* VideoVC.mm in Sources */,
 				04CDF47A22EADFDA00759631 /* ImageProcessVC.mm in Sources */,
 				04CDF48422EED68800759631 /* MatVC.m in Sources */,

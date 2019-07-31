@@ -10,6 +10,7 @@
 #import "VideoVC.h"
 #import "ImageProcessVC.h"
 #import "MatVC.h"
+#import "EdgeVC.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,7 @@
 @property(nonatomic,strong) UIButton * videoBtn;
 @property(nonatomic,strong) UIButton * imageProcessBtn;
 @property(nonatomic,strong) UIButton * matBtn;
+@property(nonatomic,strong) UIButton * edgeBtn;
 
 @end
 
@@ -64,6 +66,16 @@
     [_matBtn.layer setCornerRadius:10.0];
     [_matBtn addTarget:self action:@selector(mat:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_matBtn];
+    
+    _edgeBtn=[UIButton new];
+    _edgeBtn.backgroundColor=[UIColor darkGrayColor];
+    _edgeBtn.frame=CGRectMake(30, 210, 145, 45);
+    _edgeBtn.titleLabel.font=[UIFont systemFontOfSize:20];
+    _edgeBtn.titleLabel.textColor=[UIColor whiteColor];
+    [_edgeBtn setTitle:@"边缘检测" forState:UIControlStateNormal];
+    [_edgeBtn.layer setCornerRadius:10.0];
+    [_edgeBtn addTarget:self action:@selector(edge:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_edgeBtn];
 }
 
 -(void)imageDemo:(UIButton*)sender{
@@ -85,6 +97,12 @@
     MatVC * tableViewController=[[MatVC alloc]init];
     [self.navigationController pushViewController:tableViewController animated:NO];
 }
+
+-(void)edge:(UIButton*)sender{
+    EdgeVC * tableViewController=[[EdgeVC alloc]init];
+    [self.navigationController pushViewController:tableViewController animated:NO];
+}
+
 
 
 
