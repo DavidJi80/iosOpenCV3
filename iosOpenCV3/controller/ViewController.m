@@ -11,6 +11,7 @@
 #import "ImageProcessVC.h"
 #import "MatVC.h"
 #import "EdgeVC.h"
+#import "HoughVC.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,7 @@
 @property(nonatomic,strong) UIButton * imageProcessBtn;
 @property(nonatomic,strong) UIButton * matBtn;
 @property(nonatomic,strong) UIButton * edgeBtn;
+@property(nonatomic,strong) UIButton * houghBtn;
 
 @end
 
@@ -76,6 +78,16 @@
     [_edgeBtn.layer setCornerRadius:10.0];
     [_edgeBtn addTarget:self action:@selector(edge:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_edgeBtn];
+    
+    _houghBtn=[UIButton new];
+    _houghBtn.backgroundColor=[UIColor darkGrayColor];
+    _houghBtn.frame=CGRectMake(200, 210, 145, 45);
+    _houghBtn.titleLabel.font=[UIFont systemFontOfSize:20];
+    _houghBtn.titleLabel.textColor=[UIColor whiteColor];
+    [_houghBtn setTitle:@"霍夫变换" forState:UIControlStateNormal];
+    [_houghBtn.layer setCornerRadius:10.0];
+    [_houghBtn addTarget:self action:@selector(hough:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_houghBtn];
 }
 
 -(void)imageDemo:(UIButton*)sender{
@@ -100,6 +112,11 @@
 
 -(void)edge:(UIButton*)sender{
     EdgeVC * tableViewController=[[EdgeVC alloc]init];
+    [self.navigationController pushViewController:tableViewController animated:NO];
+}
+
+-(void)hough:(UIButton*)sender{
+    HoughVC * tableViewController=[[HoughVC alloc]init];
     [self.navigationController pushViewController:tableViewController animated:NO];
 }
 
